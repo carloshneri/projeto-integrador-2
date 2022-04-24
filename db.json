@@ -1,0 +1,121 @@
+{
+  "livros": [
+    {
+      "id": "1",
+      "titulo": "",
+      "autor": "",
+      "editora": "",
+      "assunto": "",
+      "resumo": "Eita livro legal",
+      "imagem": "static/images/capa de livros/knowledge-1052013_1920.jpg"
+    },
+    {
+      "id": "3",
+      "titulo": "Jão e ",
+      "autor": "Disney",
+      "editora": "Estudio de cinema",
+      "assunto": "Filme",
+      "resumo": "Filme infantil",
+      "imagem": "static/images/capa de livros/music-3510326_1920.jpg"
+    },
+    {
+      "id": "1230258",
+      "titulo": "Rei leão",
+      "autor": "",
+      "editora": "",
+      "assunto": "",
+      "resumo": "",
+      "imagem": "static/images/capa de livros/knowledge-1052013_1920.jpg"
+    },
+    {
+      "id": "102",
+      "titulo": "jhgjhghgjhghgjhgjhgjhgjh",
+      "autor": "",
+      "editora": "",
+      "assunto": "",
+      "resumo": "",
+      "imagem": "static/images/capa de livros/knowledge-1052013_1920.jpg"
+    },
+    {
+      "id": "00000",
+      "titulo": "123123",
+      "autor": "",
+      "editora": "",
+      "assunto": "",
+      "resumo": ""
+    },
+    {
+      "id": "090",
+      "titulo": "Kiko",
+      "autor": "chaves",
+      "editora": "SBT",
+      "assunto": "",
+      "resumo": ""
+    },
+    {
+      "id": "1223",
+      "titulo": "asd",
+      "autor": "",
+      "editora": "",
+      "assunto": "",
+      "resumo": ""
+    }
+  ],
+  "emprestimos": [
+    {
+      "id": "6",
+      "titulo": "tadsasdjhga",
+      "aluno": "Eu mesmo",
+      "data_de_emprestimo": "14/11/12",
+      "data_de_devolucao": "16/12/45"
+    },
+    {
+      "id": "7",
+      "titulo": "tadsasdjhga",
+      "aluno": "Eu mesmo",
+      "data_de_emprestimo": "15/07/12",
+      "data_de_devolucao": "12/12/45"
+    },
+    {
+      "id": "8",
+      "titulo": "tad",
+      "aluno": "Eu mesmo 001",
+      "data_de_emprestimo": "14/09/12",
+      "data_de_devolucao": "14/12/45"
+    }
+  ],
+  "alunos": [
+    {
+      "id": "1230258",
+      "nome": "Carlos"
+    },
+    {
+      "id": "1230259",
+      "nome": "Gustavo fsfa"
+    },
+    {
+      "id": "102",
+      "nome": "adasdasd"
+    },
+    {
+      "id": "123",
+      "nome": "Tetse"
+    },
+    {
+      "id": "22222",
+      "nome": "SAO PAULO"
+    },
+    {
+      "id": "22222",
+      "nome": "ACME"
+    },
+    {
+      "id": "9999999",
+      "nome": "ACME"
+    },
+    {
+      "id": "999999999",
+      "nome": "ACME"
+    }
+  ]
+}

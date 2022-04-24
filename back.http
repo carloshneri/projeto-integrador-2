@@ -1,0 +1,18 @@
+
+###
+DELETE  http://localhost:3000/livros/ HTTP/1.1
+content-type: application/json
+
+###
+http://localhost:3000/emprestimos/
+
+###
+POST http://localhost:3000/alunos/ HTTP/1.1
+Content-Type: application/json
+
+
+###
+PUT http://localhost:3000/alunos/ HTTP/1.1
+Content-Type: application/json
+
+

@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<br>
+
+{% for aluno in alunos %}
+<div class = "section alunos">
+  <div>
+    <span class="alunos">RA:  {{aluno.id}} </span>    
+    <br>
+    <span class = "alunos">Nome: {{aluno.nome}} </span>
+    <br>
+  </div>
+  
+  <div>
+    <!-- Modal Trigger -->
+    <button class="btn waves-effect waves-light btn" onclick = "editar('{{aluno.id}}','{{aluno.nome}}')">Editar<i class = "material-icons left">create</i></button>
+    <button class="waves-effect waves-light btn modal-trigger" onclick="apagar('{{aluno.id}}','{{aluno.nome}}')">Apagar <i class = "material-icons left">delete</i></button>
+  </div>
+  
+  <br>
+    <div class = "divider"></div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <form action="" id="aluno_update" name = "aluno_update" method="post">
+      <label for="aluno_update">RA</label>
+      <input for ="aluno_update" id ="input_aluno_id" name = "input_aluno_id" type="text">
+      <label for="aluno_update">Nome</label>
+      <input for ="aluno_update" id ="input_aluno_nome"  name = "input_aluno_nome" type="text">
+    </form>
+  </div>
+  
+  <div class="modal-footer">
+    <button href="/aluno" class="btn modal-close waves-effect waves-green btn-flat" id ="btn_confirmar_edicao" type="submit"  form="aluno_update">OK2</button>
+    <button href="#!" class="btn modal-close waves-effect waves-green btn-flat" id ="btn_confirmar_apagar">OK1</button>
+    <button class="btn modal-close waves-effect waves-green btn-flat" onclick="habilitar()">Cancelar</button>
+    
+    
+    
+  </div>
+</div>
+
+{% endfor%}
+
+   
+{%endblock%}

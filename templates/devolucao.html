@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+{% for emprestimo in emprestimos %}
+   
+<br>
+
+    <div class = "section alunos">
+        <div>
+            <span class="alunos">Emprestimo:  {{emprestimo.id}} </span>    
+             <br>
+            <span class = "alunos">Aluno: </span>{{emprestimo.nome}} 
+            <br>
+            <span class = "alunos">Livro: </span>{{emprestimo.titulo}} 
+            <br>
+            <span class = "alunos">Data de emprestimo: </span>{{emprestimo.data_de_emprestimo}} 
+            <br>
+            <span class = "alunos">Data de devolução: </span>{{emprestimo.data_de_devolucao}} 
+            <br>
+
+
+
+        </div>
+        <div>
+            
+            <button id="btn_apagar" class="btn waves-effect waves-light btn" onclick = "editar()">Apagar</button>
+            
+           <!-- Modal Trigger -->
+       
+           <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <!-- Modal Structure -->
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+        <label for="#">RA</label>
+        <input for ="#" id ="input_aluno" type="text" value="">
+      <h4 id = "aluno"> </h4>
+      <p id = >A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <button href="#!" class="modal-close waves-effect waves-green btn-flat">Confirmar</button>
+    </div>
+  </div>
+        
+        
+        
+        
+        </div>
+        <br>
+        <div class = "divider"></div>
+
+
+
+
+{% endfor %}
+
+{%endblock%}
+

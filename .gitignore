@@ -1,0 +1,10 @@
+#Pastas
+
+/virtual
+/node_modules
+__pycache__
+
+
+#arquivos especificos
+package-lock.json
+package.json
