@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %}
+<br />
+<div class="row">
+	<form method="post" autocomplete="off" id="cadastro_livro" name="cadastro_livro">
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="isbn" class="active">ISBN</label>
+				<input id="isbn" name="isbn" type="text" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="titulo">Titulo</label>
+				<input id="titulo" name="titulo" type="text" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="editora">Editora</label>
+				<input id="editora" name="editora" type="text" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="autor">Autor</label>
+				<input id="autor" name="autor" type="text" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="assunto">Assunto</label>
+				<input id="assunto" name="assunto" type="text" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<label for="resumo">Resumo</label>
+				<textarea
+					id="resumo"
+					name="resumo"
+					class="materialize-textarea"
+					data-length="120"
+				></textarea>
+			</div>
+		</div>
+
+		<div class="file-field input-field">
+			<div class="btn">
+				<span>File</span>
+				<input type="file" />
+			</div>
+			<div class="file-path-wrapper">
+				<input class="file-path validate" type="text" id="capa_livro" name="capa_livro" />
+			</div>
+		</div>
+
+		<button class="waves-effect waves-ligt btn" type="submit" form="cadastro_livro">
+			Salvar
+		</button>
+	</form>
+</div>
+
+{% endblock %}
