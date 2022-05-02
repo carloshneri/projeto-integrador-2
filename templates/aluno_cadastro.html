@@ -1,19 +1,27 @@
+{% extends 'base.html' %} {% block content %}
 
+<br />
+<form action="" , method="post" id="cadastro" name="cadastro" autocomplete="off">
+	<div class="row">
+		<div class="input-field col s6">
+			<label for="ra">RA</label>
+			<input type="text" name="ra" id="ra" form="cadastro" class="" autocomplete ="off" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field col s6">
+			<label for="nome">Aluno</label>
+			<input type="text" name="nome" id="nome" form="cadastro"autocomplete ="off" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field col s6">
+			<label for="serie">Serie</label>
+			<input type="text" nome="serie" id="serie" size="1"autocomplete ="off" />
+		</div>
+	</div>
 
-
-
-<form action="", method="post" id="cadastro" name="cadastro">
-
-    <label for="">Aluno</label>
-    <input type="text" name="nome" id="nome" form="cadastro">
-    
-    <label for="">RA</label>
-    <input type="text" name ="ra" id ="ra" form = 'cadastro'>
-    
-    <label for="">Serie</label>
-    <input type="text" nome = "serie" id = "serie" size=1 >
-    
-    <button type="submit" form="cadastro">enviar</button>
-
+	<button class="waves-effect waves-ligt btn" type="submit" form="cadastro">Salvar</button>
 </form>
 
+{%endblock%}

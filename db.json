@@ -59,6 +59,22 @@
       "editora": "",
       "assunto": "",
       "resumo": ""
+    },
+    {
+      "id": "98765421",
+      "titulo": "joão e maria",
+      "autor": "não me lembro",
+      "assunto": "infantil",
+      "resumo": "Livro sobre dois irmãos"
+    },
+    {
+      "id": "986532147",
+      "titulo": "O escaravelho",
+      "autor": "não me lembro",
+      "editora": "Vagalume",
+      "assunto": "Infantil",
+      "resumo": "livro que conta a história de uma serie de assassinatos ",
+      "imagem": "static/images/capa de livros/Capturar1.PNG"
     }
   ],
   "emprestimos": [
@@ -116,6 +132,30 @@
     {
       "id": "999999999",
       "nome": "ACME"
+    },
+    {
+      "id": "wvErZ0K",
+      "nome": ""
+    },
+    {
+      "id": "Ugk0NVS",
+      "nome": ""
+    },
+    {
+      "id": "ffQIDkM",
+      "nome": ""
+    },
+    {
+      "id": "Doi8jDc",
+      "nome": ""
+    },
+    {
+      "id": "96565",
+      "nome": "Tropeço"
+    },
+    {
+      "id": "2to1LxO",
+      "nome": ""
     }
   ]
 }
