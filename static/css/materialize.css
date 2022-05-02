@@ -4390,8 +4390,8 @@ nav .nav-wrapper {
 }
 
 .nav-wrapper img{
-  max-width: 64px; /* altera o tamanho da imagem no menu superior*/
-  max-height:64px;
+  max-width: 150px; /* altera o tamanho da imagem no menu superior*/
+  max-height:150px;
   width: auto;
   height: auto;
 }
@@ -4565,7 +4565,7 @@ nav .input-field label.active i {
     min-height: 64px;
   }
   nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-    height: 64px; /* altera o tamnho do altura do menu inicial*/
+    height: 64px; /* altera o tamanho do altura do menu inicial*/
     line-height: 64px;
   }
   .navbar-fixed {
@@ -8490,6 +8490,7 @@ input[type=range]::-ms-thumb {
 
 .carousel.carousel-slider .carousel-item h2 {
   font-size: 24px;
+  color:rgba(255, 255, 255, 0.9);
   font-weight: 500;
   line-height: 32px;
 }
