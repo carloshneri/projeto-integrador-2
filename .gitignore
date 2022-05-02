@@ -3,7 +3,7 @@
 /virtual
 /node_modules
 __pycache__
-
+/back
 
 #arquivos especificos
 package-lock.json
