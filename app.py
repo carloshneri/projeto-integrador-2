@@ -46,7 +46,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    title = "Sala de Leitura"
+    return render_template("home.html", title=title)
 
 
 @app.route("/aluno", methods=["GET", "POST"])
@@ -89,12 +90,12 @@ def cadastro_livro():
             "id": request.form["isbn"],
             "titulo": request.form["titulo"],
             "autor": request.form["autor"],
-            "editora":request.form["editora"],
+            "editora": request.form["editora"],
             "assunto": request.form["assunto"],
             "resumo": request.form["resumo"],
-            "imagem":("static/images/capa de livros/" + request.form['capa_livro']),
+            "imagem": ("static/images/capa de livros/" + request.form["capa_livro"]),
         }
-        #arquivo = request.form['capa_livro']
+        # arquivo = request.form['capa_livro']
         envio = post_livro(url, livro)
 
         return render_template("livros_cadastro.html")
