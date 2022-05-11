@@ -4,7 +4,10 @@
 /node_modules
 __pycache__
 /back
+.vscode
+.pytest_cache
 
 #arquivos especificos
 package-lock.json
 package.json
+Procfile
