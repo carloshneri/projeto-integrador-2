@@ -1,75 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt">
+{% extends 'base_home.html'%} {%block content%}
 
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="static/css/materialize.css"  media="screen,projection"/>
+<div class="carousel carousel-slider" data-indicators="true" id="mobile-demo">
+	<div class="carousel-item orange center" href="#one!">
+		<h2>Seja bem vindo !</h2>
+		<img class="home_img" src="static/images/tela_inicial.png" />
+	</div>
 
-      <title>Sala de leitura</title>
-  </head>
-  <body class = "sala">
-  
+	<div class="carousel-item orange center" href="#two!">
+		<h2>Destaque</h2>
+		<img src="static/images/segunda_imagem.png" />
+	</div>
 
-    <header>
-        
-      <nav>
-        <div class="container">
-          <div class="nav-wrapper">
-           
-            <a href="#" class="brand-logo"> <img src="static\images\logo.png"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="/aluno">Login</a></li>
-              <li><a href="#">Sobre nós</a></li>
-              <li><a href="#">Duvidas</a></li>
-            </ul>
-          </div>
+	<div class="carousel-item orange center" href="#three!">
+		<h2>Conheça nosso acervo</h2>
+		<img src="static/images/acervo.jpg" />
+	</div>
+</div>
 
-          <ul class="sidenav" id="mobile-demo">
-              <li><a href="/aluno">Login</a></li>
-              <li><a href="#">Sobre nós</a></li>
-              <li><a href="#">Duvidas</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="carousel carousel-slider" data-indicators="true" id="mobile-demo">
-        <div class="carousel-item orange center"href="#one!">
-          <h2>Seja bem vindo !</h2>
-          <img class = "home_img" src="static/images/tela_inicial.png"></div>
-
-          <div class="carousel-item orange center" href="#two!">
-          <h2>Destaque</h2>
-          <img  src="static/images/segunda_imagem.png"></div>
-
-          <div class="carousel-item orange center" href="#three!">
-          <h2>Conheça nosso acervo</h2>
-          <img src="static/images/acervo.jpg"></div>
-      </div>
-    </main>
-
-    <footer class="page-footer">
-      <div class="footer-copyright">
-        <div class="container">
-          ©2022 Copyright: Projeto Integrador 
-      </div>
-    </div>
-    </footer>
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="static/js/materialize.min.js"></script>
-    <script type="text/javascript" src="static/js/menu.js"></script>
-     
-  </body>
-
-</html>
-    
+{%endblock%}
