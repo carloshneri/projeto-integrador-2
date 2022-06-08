@@ -9236,3 +9236,59 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+
+.collapsible-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #455a64;
+  border-bottom: 1px solid #26a69a;
+  color: #fff;
+}
+.collapsible-body {
+  display: none;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem;
+  background-color: #fb8c00;
+}
+
+  aside {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #fff;
+  }
+
+
+  body {
+    background: #367;
+  }
+  
+  .card {
+    transition: 0.5s;
+    background: #eee;
+  }
+  .card h5 {
+    padding: 10px 0px;
+  }
+  .card:hover i,
+  h5 {
+    color: #c2185b;
+  }
+  
+  .service .card:hover {
+    transform: scale(1.03);
+    background: #fff;
+  }
+  
+
+
+  
