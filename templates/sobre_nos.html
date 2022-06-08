@@ -1,35 +1,18 @@
 {% extends 'base_home.html'%} {%block content%}
 
-
-    <div class="carousel carousel-slider" id="demo-carousel-content" data-indicators="true" >
-
-
+<header class="topo carousel carousel-slider center" style="height: 200px !important"id="demo-carousel-content" data-indicators="true">            
+  <div class="carousel-fixed-item center-align">
+    <h2 class="white-text">Sobre Nós</h2> 
         <a class="carousel-item" href="#one!"><img src="static/images/book1.png"></a>
-         
-         
-         <div class="carousel-fixed-item center">
-           <h1 class="white-text">Sobre Nós</h1>
+          <a class="carousel-item" href="#two!"><img src="static/images/book2.png"></a>
+         <a class="carousel-item" href="#two!"><img  src="static/images/book2.png"></a>
           </div>
-          <a class="carousel-item" href="#two!"><img src="static/images/book2.png">
-            </a>
-         <a class="carousel-item" href="#two!"><img src="static/images/book2.png">
-            </a>
-</div>
+        </div>
+      </header>
 
-<script>
-$(document).ready(function(){
- $('#demo-carousel-content').carousel();
-  setInterval(function() {
-    $('#demo-carousel-content').carousel('next');
-  }, 1000);    
-    
-});
-</script>
-
-<div class="container service">
-
-    <h2 class="white-text">Quem somos?</h2>
   
+<div class="container service">
+  <h4 class="white-text center">Quem somos?</h4>
     <div class="row">
       <div class="col s12 m6 l3 center-align">
         <div class="card">
@@ -88,4 +71,15 @@ $(document).ready(function(){
       </div>
     </div>
   </div>
+
+
+  <script>
+$(document).ready(function(){
+ $('#demo-carousel-content').carousel();
+  setInterval(function() {
+    $('#demo-carousel-content').carousel('next');
+  }, 2000);    
+    
+});
+</script>
 {%endblock%}
