@@ -16,54 +16,49 @@
 			media="screen,projection"
 		/>
 
-		<title>Sala de leitura</title>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<div class="container">
-					<div class="nav-wrapper">
-						<a href="/" class="brand-logo"> <img src="static\images\logo.png" /></a>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale = 1;">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale = 1;"/>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="static/css/materialize.css"  media="screen,projection"/>
 
 						<a href="#" data-target="mobile-demo" class="sidenav-trigger"
 							><i class="material-icons">menu</i></a
 						>
 
-						<ul class="right hide-on-med-and-down">
-							<li>
-								<a class="dropdown-trigger" href="/aluno" data-target="menu_aluno"
-									>Aluno<i class="material-icons left">people</i></a
-								>
-							</li>
-							<li>
-								<a class="dropdown-trigger" href="/aluno" data-target="menu_livro"
-									>Livros<i class="material-icons left">book</i></a
-								>
-							</li>
-							<li>
-								<a href="/devolucao"
-									>Devolução<i class="material-icons left">refresh</i></a
-								>
-							</li>
-							<li>
-								<a href="/emprestimo"
-									>Emprestimo<i class="material-icons left">local_library</i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					
-					<ul id="menu_aluno" class="dropdown-content">
-						<li>
-							<a href="/aluno"><i class="material-icons">search</i>Consulta</a>
-						</li>
-						<li>
-							<a href="/cadastro_aluno"
-								><i class="material-icons">mode_edit</i>Cadastro</a
-							>
-						</li>
-						<li class="divider" tabindex="-1"></li>
-						<!--
+    <header>
+      
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+               <a href="/" class="brand-logo"> <img src="static\images\logo.png"></a>
+               
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>       
+
+            <ul class="right hide-on-med-and-down">
+              <li><a class="dropdown-trigger" href="/aluno" data-target="menu_aluno">Aluno<i class= "material-icons left">people</i></a></li>
+              <li><a class="dropdown-trigger" href="/aluno" data-target="menu_livro">Livros<i class="material-icons left">book</i></a></li>
+              <li><a href="/devolucao">Devolução<i class="material-icons left">refresh</i></a></li>
+            </ul>
+          </div>
+
+          <ul id='menu_duvida'class='dropdown-content'>
+            <li><a href="/duvidas"><i class="material-icons">search</i>Consulta</a></li> 
+          </ul> 
+
+          <ul id='menu_sobre'class='dropdown-content'>
+            <li><a href="/sobre_nos"><i class="material-icons">search</i>Consulta</a></li> 
+          </ul> 
+
+          <ul id='menu_aluno' class='dropdown-content'>
+            <li><a href="/aluno"><i class="material-icons">search</i>Consulta</a></li>
+            <li><a href="/cadastro_aluno"><i class="material-icons">mode_edit</i>Cadastro</a></li>
+            <li class="divider" tabindex="-1"></li>
             <li><a href="#!">three</a></li>
             <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
             <li><a href="#!"><i class="material-icons">cloud</i>five</a></li> -->
@@ -118,11 +113,49 @@
 			<div class="container row">{%block content%} {% endblock %}</div>
 		</main>
 
-		<footer class="page-footer">
-			<div class="footer-copyright">
-				<div class="container">©2021 Copyright: Projeto Integrador</div>
-			</div>
-		</footer>
+    <main class= "sala">
+        <div class = " container row">
+
+            
+
+          {%block content%}
+
+          {% endblock %}
+
+         </div>
+      
+    
+
+    </main>
+
+  
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+            ©2022 Copyright: Projeto Integrador 
+        </div>
+      </div>
+    </footer>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.js"></script>
+    <script type="text/javascript" src="static/js/menu.js"></script>
+    <script type="text/javascript" src="static/js/aluno.js"></script>
+   
+  <!-- Acessibilidade -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+ <!-- Fim da acessibilidade -->
+  </body>
 
 		<!--JavaScript at end of body for optimized loading-->
 		<script type="text/javascript" src="static/js/materialize.min.js"></script>

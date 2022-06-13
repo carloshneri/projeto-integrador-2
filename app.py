@@ -54,6 +54,15 @@ def home():
     title = "Sala de Leitura"
     return render_template("home.html", title=title)
 
+@app.route("/sobre_nos")
+def sobre_nos():
+    title = "Sobre Nós"
+    return render_template("sobre_nos.html", title=title)
+
+@app.route("/duvidas")
+def duvidas():
+    title = "Perguntas Frequentes"
+    return render_template("duvidas.html", title=title)
 
 @app.route("/aluno", methods=["GET", "POST"])
 def aluno():
