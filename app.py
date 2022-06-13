@@ -27,16 +27,16 @@ def put_aluno(url, dados):
     return envio
 
 
-def post_livro(url, dados):
-    #envio = requests.post(url + "/livros/", data=dados)
+def post_livro(dados):
+    envio = requests.post('https://pi002.herokuapp.com/livro/?format=json', data=dados)
     #return envio
-    livro.append(dados) #remover essa linha com o Back
+    #livro.append(dados) #remover essa linha com o Back
     return () #remover essa linha com o Back
 
 
 ### GET/DELETE/PUT - Livros
-def get_devolucao(url):
-    emprestimos = requests.get(url + "/emprestimos")
+def get_devolucao():
+    emprestimos = requests.get('https://pi002.herokuapp.com/emprestimo/?format=json')
     return emprestimos.json()
 
 
@@ -86,15 +86,15 @@ def aluno_envio():
 
 @app.route("/livros")
 def livros():
-    livros = livro #remover essa linha com o Back
-    # livros = requests.get(url + "/livros").json()
+   # livros = livro #remover essa linha com o Back
+    livros = requests.get("https://pi002.herokuapp.com/livro/?format=json").json()
     # livros = livros.json()
     return render_template("livros.html", livros=livros)
 
 
 @app.route("/devolucao")
 def devolucao():
-    emprestimos = [
+    ''' emprestimos = [
         {
             "id": "6",
             "titulo": "tadsasdjhga",
@@ -116,8 +116,8 @@ def devolucao():
             "data_de_emprestimo": "14/09/12",
             "data_de_devolucao": "14/12/45",
         },
-    ]
-    # emprestimos = get_devolucao(url)
+    ]'''
+    emprestimos = get_devolucao()
     return render_template("devolucao.html", emprestimos=emprestimos)
 
 
@@ -126,15 +126,18 @@ def cadastro_livro():
     if request.method == "POST":
         l = {
             "id": request.form["isbn"],
+            "isbn":request.form["isbn"],
             "titulo": request.form["titulo"],
+            "trumb": request.form["capa_livro"],
             "autor": request.form["autor"],
             "editora": request.form["editora"],
             "assunto": request.form["assunto"],
             "resumo": request.form["resumo"],
-            "imagem": ("static/images/capa de livros/" + request.form["capa_livro"]),
-        }
+            "data_cadastro":"2022-06-10",
+            }
+        
         # arquivo = request.form['capa_livro']
-        envio = post_livro(url, l)
+        envio = post_livro(l)
 
         return render_template("livros_cadastro.html")
     else:
