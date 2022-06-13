@@ -1,112 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<!--Import materialize.css-->
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="static/css/materialize.css"
+			media="screen,projection"
+		/>
 
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="static/css/materialize.css"  media="screen,projection"/>
+		<title>Sala de leitura</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="container">
+					<div class="nav-wrapper">
+						<a href="/" class="brand-logo"> <img src="static\images\logo.png" /></a>
 
-      <title>Sala de leitura</title>
-  </head>
-  <body>
-  
+						<a href="#" data-target="mobile-demo" class="sidenav-trigger"
+							><i class="material-icons">menu</i></a
+						>
 
-    <header>
-      
-      <nav>
-        <div class="container">
-          <div class="nav-wrapper">
-               <a href="/" class="brand-logo"> <img src="static\images\logo.png"></a>
-               
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>       
-
-            <ul class="right hide-on-med-and-down">
-              <li><a class="dropdown-trigger" href="/aluno" data-target="menu_aluno">Aluno<i class= "material-icons left">people</i></a></li>
-              <li><a class="dropdown-trigger" href="/aluno" data-target="menu_livro">Livros<i class="material-icons left">book</i></a></li>
-              <li><a href="/devolucao">Devolução<i class="material-icons left">refresh</i></a></li>
-            </ul>
-          </div>
-
-
-          <ul id='menu_aluno' class='dropdown-content'>
-            <li><a href="/aluno"><i class="material-icons">search</i>Consulta</a></li>
-            <li><a href="/cadastro_aluno"><i class="material-icons">mode_edit</i>Cadastro</a></li>
-            <li class="divider" tabindex="-1"></li>
+						<ul class="right hide-on-med-and-down">
+							<li>
+								<a class="dropdown-trigger" href="/aluno" data-target="menu_aluno"
+									>Aluno<i class="material-icons left">people</i></a
+								>
+							</li>
+							<li>
+								<a class="dropdown-trigger" href="/aluno" data-target="menu_livro"
+									>Livros<i class="material-icons left">book</i></a
+								>
+							</li>
+							<li>
+								<a href="/devolucao"
+									>Devolução<i class="material-icons left">refresh</i></a
+								>
+							</li>
+							<li>
+								<a href="/emprestimo"
+									>Emprestimo<i class="material-icons left">local_library</i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<ul id="menu_aluno" class="dropdown-content">
+						<li>
+							<a href="/aluno"><i class="material-icons">search</i>Consulta</a>
+						</li>
+						<li>
+							<a href="/cadastro_aluno"
+								><i class="material-icons">mode_edit</i>Cadastro</a
+							>
+						</li>
+						<li class="divider" tabindex="-1"></li>
+						<!--
             <li><a href="#!">three</a></li>
             <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-          </ul>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li> -->
+					</ul>
 
-          <ul id='menu_livro' class='dropdown-content'>
-            <li><a href="/livros"><i class="material-icons">search</i>Consulta</a></li>
-            <li><a href="/cadastro_livro"><i class="material-icons">mode_edit</i>Cadastro</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">three</a></li>
-            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-          </ul>
+					<ul id="menu_livro" class="dropdown-content">
+						<li>
+							<a href="/livros"><i class="material-icons">search</i>Consulta</a>
+						</li>
+						<li>
+							<a href="/cadastro_livro"
+								><i class="material-icons">mode_edit</i>Cadastro</a
+							>
+						</li>
+						<li class="divider" tabindex="-1"></li>
+						<li><a href="#!">three</a></li>
+						<li>
+							<a href="#!"><i class="material-icons">view_module</i>four</a>
+						</li>
+						<li>
+							<a href="#!"><i class="material-icons">cloud</i>five</a>
+						</li>
+					</ul>
+					<!-- menu dropdown mobile-->
+					<ul class="sidenav" id="mobile-demo">
+						<li>
+							<a class="dropdown-trigger" href="#!" data-target="mobile_aluno"
+								>Aluno<i class="material-icons right">arrow_drop_down</i></a
+							>
+						</li>
+						<li><a href="/livros">Livros</a></li>
+						<li><a href="/devolucao">Devolução</a></li>
+						<li><a href="/emprestimo">Emprestimo</a></li>
+						<!--
+            <li><a href="#">Mobile</a></li> -->
+					</ul>
 
+					<!-- menu dropdown por categoria-->
+					<ul id="mobile_aluno" class="dropdown-content">
+						<li><a href="/aluno">Consulta</a></li>
+						<li><a href="/cadastro_aluno">Cadastro</a></li>
 
-
-          <ul class="sidenav" id="mobile-demo">
-            <li><a class="dropdown-trigger" href="#!" data-target="mobile_aluno">Aluno<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href="/livros">Livros</a></li>
-            <li><a href="/devolucao">Devolução</a></li>
-            <li><a href="#">Mobile</a></li>
-          </ul>
-
-
-
-          <ul id="mobile_aluno" class="dropdown-content">
-            <li><a href="#!">Cadastro</a></li>
-            <li><a href="#!">Consulta</a></li>
+						<!--   
             <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul>
-         
+            <li><a href="#!">three</a></li> -->
+					</ul>
+				</div>
+			</nav>
+		</header>
 
-        </div>
-      </nav>
-    </header>
+		<main class="sala">
+			<div class="container row">{%block content%} {% endblock %}</div>
+		</main>
 
-    <main class= "sala">
-        <div class = " container row">
+		<footer class="page-footer">
+			<div class="footer-copyright">
+				<div class="container">©2021 Copyright: Projeto Integrador</div>
+			</div>
+		</footer>
 
-            
-
-          {%block content%}
-
-          {% endblock %}
-
-         </div>
-      
-    
-
-    </main>
-
-  
-    <footer class="page-footer">
-      <div class="footer-copyright">
-        <div class="container">
-            ©2021 Copyright: Projeto Integrador 
-        </div>
-      </div>
-    </footer>
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="static/js/materialize.min.js"></script>
-    <script type="text/javascript" src="static/js/materialize.js"></script>
-    <script type="text/javascript" src="static/js/menu.js"></script>
-    <script type="text/javascript" src="static/js/aluno.js"></script>
-   
-  
-  </body>
-
+		<!--JavaScript at end of body for optimized loading-->
+		<script type="text/javascript" src="static/js/materialize.min.js"></script>
+		<script type="text/javascript" src="static/js/materialize.js"></script>
+		<script type="text/javascript" src="static/js/menu.js"></script>
+		<script type="text/javascript" src="static/js/aluno.js"></script>
+		<script type="text/javascript" src="static/js/emprestimo.js"></script>
+		
+	</body>
 </html>
-    

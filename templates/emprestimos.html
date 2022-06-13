@@ -1,0 +1,31 @@
+{%extends 'base.html'%} {%block content%}
+<br />
+<div class="row">
+	<div class="col s6">
+		<form method="post" id="emprestimo" name="emprestimo" autocomplete="off">
+            <div class="row">
+				<div class="input-field">
+					<label for="isbn" class="active">ISBN</label>
+					<input id="isbn" name="isbn" type="text" onchange="busca_imagem()" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field">
+					<label for="ra" class="active">RA</label>
+					<input id="ra" name="ra" type="text" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field">
+					<label for="data_emprestimo">Data de emprestimo</label>
+					<input type="text" class="datepicker" />
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="col s6">
+		<img class="card medium" id="imagem_livro" name="imagem_livro" />
+	</div>
+</div>
+
+{%endblock%}

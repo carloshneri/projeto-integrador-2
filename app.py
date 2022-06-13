@@ -131,6 +131,12 @@ def cadastro_livro():
     else:
         return render_template("livros_cadastro.html")
 
+@app.route("/emprestimo", methods=['GET', 'POST'])
+def emprestimo():
+
+    return render_template("emprestimos.html")
+
+
 
 
 url = "http://localhost:3000"  # $ criar parametro de ambiente
