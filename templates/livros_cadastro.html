@@ -2,7 +2,7 @@
 <body>
 <br />
 <div class="row">
-	<form method="post" autocomplete="off" id="cadastro_livro" name="cadastro_livro">
+	<form method="post" autocomplete="off" id="cadastro_livro" name="cadastro_livro" enctype="multipart/form-data">
 		<div class="row">
 			<div class="input-field col s6">
 				<label for="isbn" class="active">ISBN</label>
@@ -52,7 +52,7 @@
 		<div class="file-field input-field">
 			<div class="btn">
 				<span>File</span>
-				<input type="file" id="capa_livro" name="capa_livro"/>
+				<input type="file" id="capa_livro" name="capa_livro" />
 			</div>
 			<div class="file-path-wrapper">
 				<input class="file-path validate" type="text" />

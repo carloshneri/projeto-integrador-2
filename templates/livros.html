@@ -2,12 +2,15 @@
 
 {%block content%}
     <br>
+  <body>
     {% for livro in livros %}
-<body>
+
     <div class = "section livros">
         <div class = "row">
             <div class="col s7 m7">
-                <span class="alunos">ISBN:  {{livro.id}} </span>    
+                <span class="alunos">ID:  {{livro.id}} </span>    
+                <br>
+                <span class="alunos">ISBN:  {{livro.isbn}} </span>    
                 <br>
                 <span class = "alunos">Titulo: {{livro.titulo}} </span>
                 <br>
@@ -16,13 +19,10 @@
                 <span class = "alunos">Editora:  {{livro.editora}} </sapn>
                 <br>
                 <span class = "alunos">Assunto:  {{livro.assunto}}</span>
-                <div class = "livros_botoes">
-                    <button class = "btn">Editar <i class = "material-icons">create</i></button>
-                    <button class = "btn">Apagar <i class = "material-icons">delete</i></button>
-                </div> 
-                
-                
+   
             </div>
+
+     
             
             <div class="col s5 m5">
                 <div class="card">
@@ -43,13 +43,136 @@
                 </div>
             </div>
            
-
-        
         </div>
         
+        <div>
+          <!-- Modal Trigger -->
+          <button
+            class="btn waves-effect waves-light btn"
+            onclick="editar_livro('{{livro.id}}',
+                                  '{{livro.isbn}}', 
+                                  '{{livro.titulo}}',
+                                  '{{livro.autor}}', 
+                                  '{{livro.editora}}',
+                                  '{{livro.assunto}}',
+                                  '{{livro.resumo}}'
+                                  )">
+            Editar<i class= "material-icons left" >create</i>
+          </button>
+          <button
+            class="waves-effect waves-light btn modal-trigger"
+            onclick="apagar_livro('{{livro.id}}',
+                                  '{{livro.isbn}}',
+                                  '{{livro.titulo}}',
+                                  '{{livro.autor}}',
+                                  '{{livro.editora}}')"
+          >
+            Apagar <i class="material-icons left">delete</i>
+          </button>
+        </div>
+      
+        <br />
+        <div class="divider"></div>
+      </div>
+      
+      <!-- Modal Structure -->
+      <div id="modal_livro" class="modal">
+        <div class="modal-content">
+          <form method="post" id="livro_update" name="livro_update" >
+             <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_funcao"
+              name="input_livro_funcao"
+              type= "hidden"/>
+            <label class="label_caixa" for="livro_update" id ="label_id">ID </label>
+            <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_id"
+              name="input_livro_id"
+              type="text"
+            />
+            <label class="label_caixa" for="livro_update" id="label_isbn">ISBN </label>
+            <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_isbn"
+              name="input_livro_isbn"
+              type="text"
+            />
+            <label class="label_caixa" for="livro_update"> Titulo </label>
+            <input
+              class="caixa"
+              form="livro_update"
+              id="input_livro_titulo"
+              name="input_livro_titulo"
+              type="text"
+            />
+            <label class="label_caixa" for="livro_update"> Autor </label>
+            <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_autor"
+              name="input_livro_autor"
+              type="text"
+            />
+            <label class="label_caixa" for="livro_update"> Editora </label>
+            <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_editora"
+              name="input_livro_editora"
+              type="text"
+            />
+            <label class="label_caixa" for="livro_update" id ="label_assunto"> Assunto </label>
+            <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_assunto"
+              name="input_livro_assunto"
+              type="text"
+            />
+            <label class="label_caixa" for="livro_update" id ="label_resumo" > Resumo </label>
+            <input
+              class="caixa"
+              for="livro_update"
+              id="input_livro_resumo"
+              name="input_livro_resumo"
+              type="text"
+            />
+          </form>
         
-    <div class = "divider"></div>
+    
+        <div class="modal-footer">
+          
+            <button
+            class="modal-action modal-close waves-effect waves-green btn-flat"
+            id="btn_confirmar_apagar"
+            type="submit" 
+            form="livro_update" 
+            >OK</button>
+            
+            <button class="modal-action modal-close waves-effect waves-green btn-flat"
+            type="submit" 
+            form = "livro_update" 
+            id="btn_confirmar_edicao">
+              OK
+            </button>
+
+               
+           
+           <button class="btn modal-close waves-effect waves-green btn-flat">
+            Cancelar
+          </button>
+        </div>
+    
+      </div>  
+    </div>
   </body>
+
+
     {% endfor%}
     
 {%endblock%}
+
