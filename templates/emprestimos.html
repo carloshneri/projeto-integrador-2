@@ -1,9 +1,10 @@
 {%extends 'base.html'%} {%block content%}
+
 <br />
 <div class="row">
 	<div class="col s6">
 		<form method="post" id="emprestimo" name="emprestimo" autocomplete="off">
-            <div class="row">
+			<div class="row">
 				<div class="input-field">
 					<label for="isbn" class="active">ISBN</label>
 					<input id="isbn" name="isbn" type="text" onchange="busca_imagem()" />
@@ -12,19 +13,30 @@
 			<div class="row">
 				<div class="input-field">
 					<label for="ra" class="active">RA</label>
-					<input id="ra" name="ra" type="text" />
+					<input id="ra" name="ra" type="text" maxlength="5" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field">
 					<label for="data_emprestimo">Data de emprestimo</label>
-					<input type="text" class="datepicker" />
+					<input
+						id="data_emprestimo"
+						name="data_emprestimo"
+						type="text"
+						class="datepicker"
+					/>
 				</div>
+			</div>
+
+			<div class="row">
+				<button class="btn waves-effect waves-light btn" type="submit">Enviar</button>
+				<button class="btn waves-effect waves-light btn" type="reset">limpar</button>
 			</div>
 		</form>
 	</div>
 	<div class="col s6">
 		<img class="card medium" id="imagem_livro" name="imagem_livro" />
+		
 	</div>
 </div>
 

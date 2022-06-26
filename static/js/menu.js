@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 	var options = {
-		format: 'dd/mm/yyyy',
+		format: 'yyyy/mm/dd',
 		i18n: {
 			monthsShort: [
 				'Jan',

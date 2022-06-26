@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 import requests
-
+import datetime
 
 ### GET/POST/DELETE/PUT - Aluno
 def get_alunos(url, alunos):
@@ -177,6 +177,26 @@ def cadastro_livro():
 
 @app.route("/emprestimo", methods=["GET", "POST"])
 def emprestimo():
+    
+    if request.method =="POST":
+        complemento = "T18:33:36-03:00"
+        data_emprestimo = request.form['data_emprestimo']+complemento
+        lista_data = list(data_emprestimo)
+        lista_data[4]="-"
+        lista_data[7] = "-"
+        data_emprestimo = ''.join(lista_data)
+        print("essa é a lista ")        
+        print(data_emprestimo)
+
+        empr ={ "ra": int(request.form['ra']),
+                "dataemp": data_emprestimo,
+                "datadev": "2022-06-09T18:33:36-03:00",
+                "ativo":'True',
+                "isbn":int(request.form['isbn'])}
+        envio = requests.post("https://pi002.herokuapp.com/emprestimo/?format=json", empr)
+        print("enviado o emprestimo")
+        print(envio)
+
 
     return render_template("emprestimos.html")
 
@@ -198,76 +218,4 @@ alunos = [
     {"id": "Doi8jDc", "nome": ""},
     {"id": "96565", "nome": "Tropeço"},
     {"id": "2to1LxO", "nome": ""},
-]
-
-livro = [
-    {
-        "id": "1",
-        "titulo": "",
-        "autor": "",
-        "editora": "",
-        "assunto": "",
-        "resumo": "Eita livro legal",
-        "imagem": "static/images/capa de livros/knowledge-1052013_1920.jpg",
-    },
-    {
-        "id": "3",
-        "titulo": "Jão e ",
-        "autor": "Disney",
-        "editora": "Estudio de cinema",
-        "assunto": "Filme",
-        "resumo": "Filme infantil",
-        "imagem": "static/images/capa de livros/music-3510326_1920.jpg",
-    },
-    {
-        "id": "1230258",
-        "titulo": "Rei leão",
-        "autor": "",
-        "editora": "",
-        "assunto": "",
-        "resumo": "",
-        "imagem": "static/images/capa de livros/knowledge-1052013_1920.jpg",
-    },
-    {
-        "id": "102",
-        "titulo": "jhgjhghgjhghgjhgjhgjhgjh",
-        "autor": "",
-        "editora": "",
-        "assunto": "",
-        "resumo": "",
-        "imagem": "static/images/capa de livros/knowledge-1052013_1920.jpg",
-    },
-    {
-        "id": "00000",
-        "titulo": "123123",
-        "autor": "",
-        "editora": "",
-        "assunto": "",
-        "resumo": "",
-    },
-    {
-        "id": "090",
-        "titulo": "Kiko",
-        "autor": "chaves",
-        "editora": "SBT",
-        "assunto": "",
-        "resumo": "",
-    },
-    {"id": "1223", "titulo": "asd", "autor": "", "editora": "", "assunto": "", "resumo": ""},
-    {
-        "id": "98765421",
-        "titulo": "joão e maria",
-        "autor": "não me lembro",
-        "assunto": "infantil",
-        "resumo": "Livro sobre dois irmãos",
-    },
-    {
-        "id": "986532147",
-        "titulo": "O escaravelho",
-        "autor": "não me lembro",
-        "editora": "Vagalume",
-        "assunto": "Infantil",
-        "resumo": "livro que conta a história de uma serie de assassinatos ",
-        "imagem": "static/images/capa de livros/Capturar1.PNG",
-    },
 ]
