@@ -148,8 +148,17 @@ def livros():
     return render_template("livros.html", livros=livros)
 
 
-@app.route("/devolucao")
+@app.route("/devolucao", methods = ['GET', 'POST'])
 def devolucao():
+
+
+    if request.method=='POST':
+        id = request.form["input_aluno_id_devolucao"]
+        
+        url = "https://pi002.herokuapp.com/emprestimo/" + id + "/?format=json"
+        
+        requests.delete(url)
+
     emprestimos = get_devolucao()
     return render_template("devolucao.html", emprestimos=emprestimos)
 
